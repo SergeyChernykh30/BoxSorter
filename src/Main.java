@@ -15,23 +15,9 @@ public class Main
 
         int boxCount = scanner.nextInt();
 
-        if (boxCount == 0) {
-
-        } else if (boxCount < maxCountBoxesInContainer) {
-            containersCount++;
-            tracksCount++;
-            System.out.println("Грузовик: " + tracksCount + System.lineSeparator() +
-                    "\tКонтейнер: " + containersCount);
-        } else if (boxCount >= maxCountBoxesInContainer) {
-            containersCount++;
-            tracksCount++;
-            System.out.println("Грузовик: " + tracksCount + System.lineSeparator() +
-                    "\tКонтейнер: " + containersCount);
-        }
-
-        for (int i = 1; i <= boxCount; i++)
+        for (int i = 0; i < boxCount; i++)
         {
-            System.out.println("\t\tЯщик: " + i);
+            //System.out.println("\t\tЯщик: " + i);
             if (i % maxCountBoxesInTrack == 0)
             {
                 tracksCount++;
@@ -46,6 +32,8 @@ public class Main
                     System.out.println("\tКонтейнер: " + containersCount);
                 }
             }
+
+            System.out.println("\t\tЯщик: " + (i + 1));
         }
 
         System.out.println("Count of tracks = " + tracksCount);
